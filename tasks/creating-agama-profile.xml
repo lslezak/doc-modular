@@ -55,7 +55,7 @@
     </itemizedlist>
     <example xml:id="agama-minimal-profile">
       <title>A basic &agama; profile for automated installation</title>
-<screen>
+<screen language="agama-json">
 {
   "product": {
     "id": "<replaceable>PRODUCT_ID</replaceable>",
@@ -122,7 +122,7 @@
     </para>
     <example xml:id="agama-full-profile">
       <title>A more complete &agama; profile for automated installation</title>
-<screen>
+<screen  language="agama-json">
 {
   "product": {
     "id": "<replaceable>PRODUCT_ID</replaceable>", <co xml:id="full-product-id"/>
