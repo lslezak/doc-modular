@@ -363,7 +363,8 @@
     </para>
     <example>
       <title>Behavior of <literal>search</literal> if omitted for a drive</title>
-<screen>
+<screen language="agama-json">
+<phrase role="hide">"storage": { "drives": [</phrase>
 {
   "search": {
     "sort": "name",
@@ -371,6 +372,7 @@
     "ifNotFound": "error"
   }
 }
+<phrase role="hide">]}</phrase>
 </screen>
     </example>
     <para>
@@ -381,8 +383,10 @@
     </para>
     <example>
       <title>Searching using device name</title>
-<screen>
+<screen language="agama-json">
+<phrase role="hide">"storage": { "drives": [</phrase>
 { "search": "/dev/sda" }
+<phrase role="hide">]}</phrase>
 </screen>
     </example>
     <para>
@@ -393,11 +397,15 @@
     </para>
     <example>
       <title>Example of equivalent search</title>
-<screen>
+<screen language="agama-json">
+<phrase role="hide">"storage": { "drives": [</phrase>
 { "search": "*" }
+<phrase role="hide">]}</phrase>
 </screen>
-<screen>
+<screen language="agama-json">
+<phrase role="hide">"storage": { "drives": [</phrase>
 { "search": { "ifNotFound": "skip" } }
+<phrase role="hide">]}</phrase>
 </screen>
     </example>
   </section>
@@ -444,9 +452,21 @@
             match unformatted ones; otherwise provide an object with <literal>type</literal> or
             <literal>label</literal>.
           </para>
-<screen>{ "search": { "condition": { "filesystem": "any" } } }
+<screen language="agama-json">
+<phrase role="hide">"storage": { "drives": [</phrase>
+{ "search": { "condition": { "filesystem": "any" } } }
+<phrase role="hide">]}</phrase>
+</screen>
+<screen language="agama-json">
+<phrase role="hide">"storage": { "drives": [</phrase>
 { "search": { "condition": { "filesystem": { "type": "xfs" } } } }
-{ "search": { "condition": { "filesystem": { "label": "DATA" } } } }</screen>
+<phrase role="hide">]}</phrase>
+</screen>
+<screen language="agama-json">
+<phrase role="hide">"storage": { "drives": [</phrase>
+{ "search": { "condition": { "filesystem": { "label": "DATA" } } } }
+<phrase role="hide">]}</phrase>
+</screen>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -507,7 +527,10 @@
               </tbody>
             </tgroup>
           </table>
-<screen>{ "search": { "condition": { "id": "esp" } } }</screen>
+<!-- FIXME: fix this example so it validates against the Agama JSON schema -->
+<screen>
+{ "search": { "condition": { "id": "esp" } } }
+</screen>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -518,7 +541,11 @@
             <command>hwinfo</command>. A drive can be handled by several drivers; the condition
             matches if any of them is the given one.
           </para>
-<screen>{ "search": { "condition": { "driver": "ahci" } } }</screen>
+<screen language="agama-json">
+<phrase role="hide">"storage": { "drives": [</phrase>
+{ "search": { "condition": { "driver": "ahci" } } }
+<phrase role="hide">]}</phrase>
+</screen>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -540,9 +567,23 @@
             <literal>all</literal>, or <literal>count</literal> to match against a nested
             condition.
           </para>
-<screen>{ "search": { "condition": { "partitions": "any" } } }
+<screen language="agama-json">
+<phrase role="hide">"storage": { "drives": [</phrase>
+{ "search": { "condition": { "partitions": "any" } } }
+<phrase role="hide">]}</phrase>
+</screen>
+
+<screen language="agama-json">
+<phrase role="hide">"storage": { "drives": [</phrase>
 { "search": { "condition": { "partitions": { "any": { "size": { "greater": "10 GiB" } } } } } }
-{ "search": { "condition": { "partitions": { "count": { "min": 2, "max": 3 } } } } }</screen>
+<phrase role="hide">]}</phrase>
+</screen>
+
+<screen language="agama-json">
+<phrase role="hide">"storage": { "drives": [</phrase>
+{ "search": { "condition": { "partitions": { "count": { "min": 2, "max": 3 } } } } }
+<phrase role="hide">]}</phrase>
+</screen>
         </listitem>
       </varlistentry>
     </variablelist>
@@ -550,7 +591,9 @@
       Combine conditions with <literal>and</literal>, <literal>or</literal>, and
       <literal>not</literal> operators, each taking one or more nested conditions:
     </para>
-<screen>{
+<screen language="agama-json">
+<phrase role="hide">"storage": { "drives": [</phrase>
+{
   "search": {
     "condition": {
       "and": [
@@ -559,7 +602,9 @@
       ]
     }
   }
-}</screen>
+}
+<phrase role="hide">]}</phrase>
+</screen>
   </section>
   <section xml:id="reference-other-devices-agama-storage">
     <title>Referencing other devices</title>
@@ -597,7 +642,7 @@
     </para>
     <example>
       <title>Equivalent examples of alias</title>
-<screen>
+<screen language="agama-json">
 "storage": {
   "drives": [
     {
@@ -622,7 +667,8 @@
     }
   ]
 }
-
+</screen>
+<screen language="agama-json">
 "storage": {
   "drives": [
     {
