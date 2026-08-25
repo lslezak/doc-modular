@@ -69,6 +69,8 @@ jobs:
       - uses: actions/checkout@v7
       - name: Validate Agama JSON profiles
         uses: lslezak/agama-doc-validator@v1
+        with:
+          mode: validate
       - name: Detect missing language="agama-json" attributes
         uses: lslezak/agama-doc-validator@v1
         with:
