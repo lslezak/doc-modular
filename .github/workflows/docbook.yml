@@ -28,7 +28,7 @@ jobs:
       allow-build: ${{ steps.select-dc-build.outputs.allow-build }}
       relevant-branches: ${{ steps.select-dc-build.outputs.relevant-branches }}
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - name: Checking basic soundness of DC files
         uses: openSUSE/doc-ci@gha-select-dcs
@@ -57,7 +57,7 @@ jobs:
       matrix:
         dc-files: ${{ fromJson(needs.select-dc-files.outputs.validate-list) }}
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - name: Validating DC file(s) ${{ matrix.dc-files }}
         uses: openSUSE/doc-ci@gha-validate
         with:
@@ -69,13 +69,10 @@ jobs:
       - uses: actions/checkout@v7
       - name: Validate Agama JSON profiles
         uses: lslezak/agama-doc-validator@v1
-        with:
-          verbose: "true"
       - name: Detect missing language="agama-json" attributes
         uses: lslezak/agama-doc-validator@v1
         with:
           mode: missing
-          verbose: "true"
 
   build-html:
     runs-on: ubuntu-latest
@@ -88,7 +85,7 @@ jobs:
       matrix:
         dc-files: ${{ fromJson(needs.select-dc-files.outputs.build-list) }}
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - name: Building DC file(s) ${{ matrix.dc-files }}
         id: build-dc
         uses: openSUSE/doc-ci@gha-build
