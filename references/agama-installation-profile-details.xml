@@ -470,12 +470,12 @@
               To add to, or remove from, the default selection instead of replacing it, use an
               object with <literal>add</literal> and&nbsp;<literal>remove</literal> keys:
             </para>
-<screen language="agama-json"><phrase role="hide">"software": {</phrase>
+<screen language="agama-json"><remark>"software": {</remark>
 "patterns": {
   "add": ["<replaceable>gnome</replaceable>", "<replaceable>office</replaceable>"],
   "remove": ["<replaceable>selinux</replaceable>"]
 }
-<phrase role="hide">}</phrase></screen>
+<remark>}</remark></screen>
           </note>
         </listitem>
       </varlistentry>
@@ -625,7 +625,7 @@
   "drives": [ ... ],
   "volumeGroups": [ ... ],
   "mdRaids": [ ... ],
-  "boot": { ... <phrase role="hide">"configure": false</phrase>}
+  "boot": { ... <remark>"configure": false</remark>}
 }
 </screen>
     </example>
@@ -1173,7 +1173,7 @@
           </itemizedlist>
           <example>
             <title>Sample <literal>vlan</literal> connection for an &agama; installation profile</title>
-<screen language="agama-json"><phrase role="hide">"network": { "connections": [</phrase>
+<screen language="agama-json"><remark>"network": { "connections": [</remark>
 {
   "id": "<replaceable>vlan10</replaceable>",
   "method4": "manual",
@@ -1186,7 +1186,7 @@
     "parent": "<replaceable>eth0</replaceable>"
   }
 }
-<phrase role="hide">] }</phrase></screen>
+<remark>] }</phrase></remark>
           </example>
         </listitem>
       </varlistentry>

@@ -41,7 +41,7 @@
     </para>
 <screen language="agama-json">
 {
-  "product": {<phrase role="hide">"id":"SLES"</phrase>}, <co xml:id="product"/>
+  "product": {<remark>"id":"SLES"</remark>}, <co xml:id="product"/>
   "root": {}, <co xml:id="root"/>
   "user": {<remark>"fullName":"foo","userName":"bar","password":"baz"</remark>}, <co xml:id="user"/>
   "l10n": {}, <co xml:id="l10n"/>

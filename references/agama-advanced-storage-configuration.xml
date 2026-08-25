@@ -364,7 +364,7 @@
     <example>
       <title>Behavior of <literal>search</literal> if omitted for a drive</title>
 <screen language="agama-json">
-<phrase role="hide">"storage": { "drives": [</phrase>
+<remark>"storage": { "drives": [</remark>
 {
   "search": {
     "sort": "name",
@@ -372,7 +372,7 @@
     "ifNotFound": "error"
   }
 }
-<phrase role="hide">]}</phrase>
+<remark>]}</remark>
 </screen>
     </example>
     <para>
@@ -384,9 +384,9 @@
     <example>
       <title>Searching using device name</title>
 <screen language="agama-json">
-<phrase role="hide">"storage": { "drives": [</phrase>
+<remark>"storage": { "drives": [</remark>
 { "search": "/dev/sda" }
-<phrase role="hide">]}</phrase>
+<remark>]}</remark>
 </screen>
     </example>
     <para>
@@ -398,14 +398,14 @@
     <example>
       <title>Example of equivalent search</title>
 <screen language="agama-json">
-<phrase role="hide">"storage": { "drives": [</phrase>
+<remark>"storage": { "drives": [</remark>
 { "search": "*" }
-<phrase role="hide">]}</phrase>
+<remark>]}</remark>
 </screen>
 <screen language="agama-json">
-<phrase role="hide">"storage": { "drives": [</phrase>
+<remark>"storage": { "drives": [</remark>
 { "search": { "ifNotFound": "skip" } }
-<phrase role="hide">]}</phrase>
+<remark>]}</remark>
 </screen>
     </example>
   </section>
@@ -453,19 +453,19 @@
             <literal>label</literal>.
           </para>
 <screen language="agama-json">
-<phrase role="hide">"storage": { "drives": [</phrase>
+<remark>"storage": { "drives": [</remark>
 { "search": { "condition": { "filesystem": "any" } } }
-<phrase role="hide">]}</phrase>
+<remark>]}</remark>
 </screen>
 <screen language="agama-json">
-<phrase role="hide">"storage": { "drives": [</phrase>
+<remark>"storage": { "drives": [</remark>
 { "search": { "condition": { "filesystem": { "type": "xfs" } } } }
-<phrase role="hide">]}</phrase>
+<remark>]}</remark>
 </screen>
 <screen language="agama-json">
-<phrase role="hide">"storage": { "drives": [</phrase>
+<remark>"storage": { "drives": [</remark>
 { "search": { "condition": { "filesystem": { "label": "DATA" } } } }
-<phrase role="hide">]}</phrase>
+<remark>]}</remark>
 </screen>
         </listitem>
       </varlistentry>
@@ -542,9 +542,9 @@
             matches if any of them is the given one.
           </para>
 <screen language="agama-json">
-<phrase role="hide">"storage": { "drives": [</phrase>
+<remark>"storage": { "drives": [</remark>
 { "search": { "condition": { "driver": "ahci" } } }
-<phrase role="hide">]}</phrase>
+<remark>]}</remark>
 </screen>
         </listitem>
       </varlistentry>
@@ -568,21 +568,21 @@
             condition.
           </para>
 <screen language="agama-json">
-<phrase role="hide">"storage": { "drives": [</phrase>
+<remark>"storage": { "drives": [</remark>
 { "search": { "condition": { "partitions": "any" } } }
-<phrase role="hide">]}</phrase>
+<remark>]}</remark>
 </screen>
 
 <screen language="agama-json">
-<phrase role="hide">"storage": { "drives": [</phrase>
+<remark>"storage": { "drives": [</remark>
 { "search": { "condition": { "partitions": { "any": { "size": { "greater": "10 GiB" } } } } } }
-<phrase role="hide">]}</phrase>
+<remark>]}</remark>
 </screen>
 
 <screen language="agama-json">
-<phrase role="hide">"storage": { "drives": [</phrase>
+<remark>"storage": { "drives": [</remark>
 { "search": { "condition": { "partitions": { "count": { "min": 2, "max": 3 } } } } }
-<phrase role="hide">]}</phrase>
+<remark>]}</remark>
 </screen>
         </listitem>
       </varlistentry>
@@ -592,7 +592,7 @@
       <literal>not</literal> operators, each taking one or more nested conditions:
     </para>
 <screen language="agama-json">
-<phrase role="hide">"storage": { "drives": [</phrase>
+<remark>"storage": { "drives": [</remark>
 {
   "search": {
     "condition": {
@@ -603,7 +603,7 @@
     }
   }
 }
-<phrase role="hide">]}</phrase>
+<remark>]}</remark>
 </screen>
   </section>
   <section xml:id="reference-other-devices-agama-storage">
