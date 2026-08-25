@@ -1186,7 +1186,7 @@
     "parent": "<replaceable>eth0</replaceable>"
   }
 }
-<remark>] }</phrase></remark>
+<remark>] }</remark></screen>
           </example>
         </listitem>
       </varlistentry>
