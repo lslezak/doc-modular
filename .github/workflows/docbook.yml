@@ -71,6 +71,11 @@ jobs:
         uses: lslezak/agama-doc-validator@v1
         with:
           verbose: "true"
+      - name: Detect missing language="agama-json" attributes
+        uses: lslezak/agama-doc-validator@v1
+        with:
+          mode: missing
+          verbose: "true"
 
   build-html:
     runs-on: ubuntu-latest
