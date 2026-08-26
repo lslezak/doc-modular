@@ -455,15 +455,9 @@
 <screen language="agama-json">
 <remark>"storage": { "drives": [</remark>
 { "search": { "condition": { "filesystem": "any" } } }
-<remark>]}</remark>
-</screen>
-<screen language="agama-json">
-<remark>"storage": { "drives": [</remark>
+<remark>,</remark>
 { "search": { "condition": { "filesystem": { "type": "xfs" } } } }
-<remark>]}</remark>
-</screen>
-<screen language="agama-json">
-<remark>"storage": { "drives": [</remark>
+<remark>,</remark>
 { "search": { "condition": { "filesystem": { "label": "DATA" } } } }
 <remark>]}</remark>
 </screen>
@@ -570,17 +564,9 @@
 <screen language="agama-json">
 <remark>"storage": { "drives": [</remark>
 { "search": { "condition": { "partitions": "any" } } }
-<remark>]}</remark>
-</screen>
-
-<screen language="agama-json">
-<remark>"storage": { "drives": [</remark>
+<remark>,</remark>
 { "search": { "condition": { "partitions": { "any": { "size": { "greater": "10 GiB" } } } } } }
-<remark>]}</remark>
-</screen>
-
-<screen language="agama-json">
-<remark>"storage": { "drives": [</remark>
+<remark>,</remark>
 { "search": { "condition": { "partitions": { "count": { "min": 2, "max": 3 } } } } }
 <remark>]}</remark>
 </screen>
