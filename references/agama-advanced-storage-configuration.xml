@@ -521,9 +521,10 @@
               </tbody>
             </tgroup>
           </table>
-<!-- FIXME: fix this example so it validates against the Agama JSON schema -->
-<screen>
-{ "search": { "condition": { "id": "esp" } } }
+<screen language="agama-json">
+<remark>"storage": { "drives": [</remark>
+{ "partitions": [ { "search": { "condition": { "id": "esp" } } } ] }
+<remark>]}</remark>
 </screen>
         </listitem>
       </varlistentry>
