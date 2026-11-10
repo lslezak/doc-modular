@@ -311,20 +311,8 @@
       <para>
         If ACPI was enabled during a Windows XP/Windows Server 2003 guest
         installation, turning it on in the &vmguest; configuration only is not
-        sufficient. For more information, see:
+        sufficient.
       </para>
-      <itemizedlist>
-        <listitem>
-          <para>
-            <link xlink:href="https://support.microsoft.com/en-us/kb/314088"/>
-          </para>
-        </listitem>
-        <listitem>
-          <para>
-            <link xlink:href="https://support.microsoft.com/en-us/kb/309283"/>
-          </para>
-        </listitem>
-      </itemizedlist>
       <para>
         Regardless of the &vmguest;'s configuration, a graceful shutdown is
         always possible from within the guest operating system.
@@ -737,7 +725,7 @@
               &vmguest;s. However, external snapshots are not supported by
               &vmm;, and cannot be deleted by <command>virsh</command>
               directly. For more information on external snapshots in &qemu;,
-              see <link xlink:href="https://documentation.suse.com/sles/16.0/html/SLES-virtualization-qemu/index.html#qemu-guest-inst-qemu-img-effect">Manipulate disk images effectively</link>.
+              see <link xlink:href="https://documentation.suse.com/sles/&productnumber;/html/SLES-virtualization-qemu/index.html#qemu-guest-inst-qemu-img-effect">Manipulate disk images effectively</link>.
             </para>
           </listitem>
         </varlistentry>

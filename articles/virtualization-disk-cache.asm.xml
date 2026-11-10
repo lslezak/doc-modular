@@ -63,22 +63,24 @@
     </dm:docmanager>
 
     <!-- Architecture -->
-    <meta name="architecture" its:translate="no">
-      <phrase>&x86-64;</phrase>
-      <phrase>&power;</phrase>
-    </meta>
+   <meta name="architecture">        
+        <phrase os="sles;sles4sap">&ppc64le;</phrase>
+        <phrase os="sles;sles4sap">&x86-64;</phrase>
+        <phrase os="sles;sles4sap">&zseries;</phrase>
+        <phrase os="sles;sles4sap;sles4nvidia">&aarch64;</phrase>
+      </meta>
 
     <!-- Productname & Version -->
-    <meta name="productname" its:translate="no">
-      <productname version="&productnumber;">&productname;</productname>
-    </meta>
+   <meta name="productname" its:translate="no">
+        <productname version="&productnumber;" os="sles;sles4sap;sles4nvidia">&productname;</productname>
+      </meta>
 
     <!-- Social Media -->
     <meta name="title" its:translate="yes">Configuring a virtual disk cache mode</meta>
-    <meta name="social-descr" its:translate="yes">Increase the read/write performance of VMs.</meta>
+    <meta name="social-descr" its:translate="yes">Increase the read/write performance of VMs</meta>
 
     <!-- Search -->
-    <meta name="description" its:translate="yes">Virtual machines can use disk cache modes to make reading and writing operations more effective.</meta>
+    <meta name="description" its:translate="yes">Virtual machines can use disk cache modes to make reading and writing operations more effective</meta>
 
       <abstract>
         <para>A virtual disk cache mode configures how virtual machine disk I/O operations use the host server's memory in &productname;. By selecting the appropriate caching strategy&mdash;such as none, writethrough or writeback&mdash;administrators can balance I/O performance against data safety during host crashes or live migrations. Fine-tuning this setting optimizes guest storage responsiveness while maintaining critical data integrity across virtualization environments.</para>

@@ -117,9 +117,11 @@ The newest revision history comes first in the list -->
       <!-- TODO: provide a listing of possible and validatable meta entry values. Maybe in our geekodoc repo? -->
       <!-- add author's e-mail -->
       <meta name="maintainer" content="cwickert@suse.com" its:translate="no"/>
-      <meta name="architecture">
+      <meta name="architecture">        
+        <phrase>&ppc64le;</phrase>
         <phrase>&x86-64;</phrase>
-        <phrase>&power;</phrase>
+        <phrase>&zseries;</phrase>
+        <phrase>&aarch64;</phrase>
       </meta>
       <!-- enter one or more product names and version -->
       <meta name="productname" its:translate="no">
@@ -236,7 +238,14 @@ The newest revision history comes first in the list -->
     <merge>
       <title>Upgrading from &productnameshort; 15 to &productnameshort; &productnumber;</title>
       <revhistory xml:id="rh-sleha16-upgrade">
-        <revision><date>2026-11-03</date>
+        <revision><date>2026-11-10</date>
+          <revdescription>
+            <para>
+              Updates for 16.1
+            </para>
+          </revdescription>
+        </revision>
+        <revision><date>2026-07-16</date>
           <revdescription>
             <para>
               Initial version

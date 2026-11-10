@@ -43,6 +43,13 @@ xmlns="http://docbook.org/ns/docbook">
 <title>Understanding Kernel Control Groups</title>
 <!-- History -->
 <revhistory xml:id="rh-sles-kernel-control-groups">
+<revision><date>2026-11-05</date>
+          <revdescription>
+            <para>
+              Updated metadata
+            </para>
+          </revdescription>
+        </revision>
 <revision><date>2026-10-05</date>
           <revdescription>
             <para>
@@ -61,23 +68,23 @@ Initial version
 <!-- Maintainer -->
 <meta name="maintainer" content="shalaka.harne@suse.com" its:translate="no"/>
 <!-- Architecture -->
-<meta name="architecture" its:translate="no">
-<phrase>&x86-64;</phrase>
-<phrase>&power;</phrase>
-<phrase>&zseries;</phrase>
-<phrase>&aarch64;</phrase>
-</meta>
+<meta name="architecture">        
+        <phrase os="sles;sles4sap">&ppc64le;</phrase>
+        <phrase os="sles;sles4sap">&x86-64;</phrase>
+        <phrase os="sles;sles4sap">&zseries;</phrase>
+        <phrase os="sles;sles4sap;sles4nvidia">&aarch64;</phrase>
+      </meta>
 <!-- Productname & Version -->
 <meta name="productname">
-<productname version="&productnumber;" os="sles;sles4sap">&productname;</productname> 
+<productname version="&productnumber;" os="sles;sles4sap;sles4nvidia">&productname;</productname> 
 </meta>
 <!-- Social Media -->
 <meta name="title">Understanding Kernel Control Groups</meta>
 <meta name="description">
-How to use Kernel Control Groups.
+Learn how to manage kernel control groups in &productname; using systemd slices to regulate CPU, memory, and I/O resource consumption
 </meta>
 <!-- Search -->
-<meta name="social-descr">Kernel Control Groups</meta>
+<meta name="social-descr">Understand kernel control groups in &productnameshort;</meta>
 <!-- Task -->
 <meta name="task" its:translate="no">
 <phrase>Configuration</phrase>

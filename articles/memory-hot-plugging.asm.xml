@@ -64,16 +64,18 @@
       <!-- TODO: provide a listing of possible and validatable meta entry values. Maybe in our geekodoc repo? -->
       <!-- add author's e-mail -->
       <meta name="maintainer" content="jsindelarova@suse.com" its:translate="no"/>
-      <meta name="architecture">
+      <meta name="architecture">        
+        <phrase>&ppc64le;</phrase>
         <phrase>&x86-64;</phrase>
-        <phrase>&power;</phrase>
+        <phrase>&zseries;</phrase>
+        <phrase>&aarch64;</phrase>
       </meta>
       <!-- enter one or more product names and version -->
       <meta name="productname" its:translate="no">
         <productname os="sles;sles4sap" version="&productnumber;">&productname;</productname>
       </meta>
       <meta name="title" its:translate="yes">Mastering Memory Hotplugging</meta>
-      <meta name="description" its:translate="yes">Learn how to configure, insert, and safely unplug memory modules on &productname; without system downtime</meta>
+      <meta name="description" its:translate="yes">Learn how to configure, insert and safely unplug memory modules on &productname; without system downtime</meta>
       <meta name="social-descr" its:translate="yes">Manage RAM hotplugging on &productnameshort; without downtime</meta>
       <!-- suitable categories has to be identical with the category selected in the docserv config -->
       <meta name="category" its:translate="no">

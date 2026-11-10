@@ -97,7 +97,7 @@
           <revdescription>
             <para>
               Initial version. This article was split out of
-              <link xlink:href="https://documentation.suse.com/sles/16.0/html/SLES-x86-64-agama-automated-installation/index.html">Automated
+              <link xlink:href="https://documentation.suse.com/sles/&productnumber;/html/SLES-x86-64-agama-automated-installation/index.html">Automated
               Installation Using &agama;</link> to keep &ay;-specific compatibility and
               migration information separate from the general profile workflow.
             </para>
@@ -105,7 +105,11 @@
         </revision>
       </revhistory>
       <meta name="maintainer" content="souvik.sarkar@suse.com" its:translate="no"/>
-      <meta name="architecture"><phrase>&x86-64;</phrase>
+      <meta name="architecture">       
+        <phrase arch="power">&ppc64le;</phrase>
+        <phrase arch="x86_64">&x86-64;</phrase>
+        <phrase arch="zseries">&zseries;</phrase>
+        <phrase arch="aarch64">&aarch64;</phrase>
       </meta>
       <meta name="productname" its:translate="no">
         <productname version="&productnumber;" os="sles;sles4sap">&productname;</productname>
@@ -146,7 +150,7 @@
           <listitem>
             <para>
               Familiarity with creating and editing &agama; profiles, covered in
-              <link xlink:href="https://documentation.suse.com/sles/16.0/html/SLES-x86-64-agama-automated-installation/index.html">Automated
+              <link xlink:href="https://documentation.suse.com/sles/&productnumber;/html/SLES-x86-64-agama-automated-installation/index.html">Automated
               Installation Using &agama;</link>
             </para>
           </listitem>

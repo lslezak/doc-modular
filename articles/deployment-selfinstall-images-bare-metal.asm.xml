@@ -78,10 +78,17 @@
   <!-- S T R U C T U R E -->
   <structure renderas="article" xml:id="deployment-selfinstall-images" xml:lang="en">
     <merge>
-      <title>Deploying &productnameshort; Using an ISO Image</title>
+      <title>Deploying Immutable &productnameshort; Using a Raw Disk ISO</title>
       <!-- Create changelog to enable versioning; add most recent entries at the top. -->
       <!-- History -->
       <revhistory xml:id="rh-deployment-raw-images">
+        <revision><date>2026-11-04</date>
+          <revdescription>
+            <para>
+              Revised title
+            </para>
+          </revdescription>
+        </revision>
         <revision><date>2026-08-25</date>
           <revdescription>
              <para>
@@ -102,9 +109,11 @@
 
       <!-- Architecture -->
       <!-- jjaeger: just the two platforms??? -->
-      <meta name="architecture" its:translate="no">
-        <phrase>&x86-64;</phrase>
-        <phrase>&power;</phrase>
+      <meta name="architecture">        
+        <phrase os="sles;sles4sap">&ppc64le;</phrase>
+        <phrase os="sles;sles4sap">&x86-64;</phrase>
+        <phrase os="sles;sles4sap">&zseries;</phrase>
+        <phrase os="sles;sles4sap;sles4nvidia">&aarch64;</phrase>
       </meta>
       <!-- Productname & Version -->
       <meta name="productname" its:translate="no">
